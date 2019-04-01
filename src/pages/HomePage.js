@@ -6,7 +6,9 @@ export default function HomePage() {
   return (
     <React.Fragment>
       <Hero title="awesome gadgets" max="true">
-        <Link to="/products">Our Products</Link>
+        <Link to="/products" className="main-link" style={{ margin: "2rem" }}>
+          Our Products
+        </Link>
       </Hero>
     </React.Fragment>
   );
