@@ -6,7 +6,6 @@ export default function HomePage() {
     <React.Fragment>
       <ProductConsumer>
         {value => {
-          console.log(value);
           return <h1>Aum Namah Shivaya from home page</h1>;
         }}
       </ProductConsumer>
