@@ -20,7 +20,42 @@ class ProductProvider extends Component {
     filteredProducts: [],
     featuredProducts: [],
     singleProduct: {},
-    loading: true
+    loading: false
+  };
+
+  componentDidMount() {
+    // from contentful items
+
+    this.setProducts(items);
+  }
+
+  // set products
+
+  setProducts = products => {
+    let storeProducts = products.map(item => {
+      const { id } = item.sys;
+      const product = { id, ...item.fields };
+      return product;
+    });
+
+    // featured products
+    let featuredProducts = storeProducts.filter(item => item.featured);
+    this.setState({
+      storeProducts,
+      filteredProducts: storeProducts,
+      featuredProducts,
+      cart: this.getStorageCart(),
+      singleProduct: this.getStorageProduct(),
+      loading: false
+    });
+  };
+
+  getStorageCart = () => {
+    return [];
+  };
+
+  getStorageProduct = () => {
+    return {};
   };
 
   // handle sidebar
