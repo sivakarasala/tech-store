@@ -50,12 +50,27 @@ class ProductProvider extends Component {
     });
   };
 
+  // get cart from local storage
   getStorageCart = () => {
     return [];
   };
-
+  // get product from local storage
   getStorageProduct = () => {
     return {};
+  };
+  // get totals
+  getTotals = () => {};
+  // add totals
+  addTotals = () => {};
+  // sync storage
+  syncStorage = () => {};
+  // add to cart
+  addToCart = id => {
+    console.log(`aum namah shivaya1 ${id}`);
+  };
+  // set single product
+  setSingleProduct = id => {
+    console.log(`aum namah shivaya ${id}`);
   };
 
   // handle sidebar
@@ -86,7 +101,9 @@ class ProductProvider extends Component {
           handleSidebar: this.handleSidebar,
           handleCart: this.handleCart,
           openCart: this.openCart,
-          closeCart: this.closeCart
+          closeCart: this.closeCart,
+          addToCart: this.addToCart,
+          setSingleProduct: this.setSingleProduct
         }}
       >
         {this.props.children}
