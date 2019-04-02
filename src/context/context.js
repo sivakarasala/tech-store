@@ -34,7 +34,8 @@ class ProductProvider extends Component {
   setProducts = products => {
     let storeProducts = products.map(item => {
       const { id } = item.sys;
-      const product = { id, ...item.fields };
+      const image = item.fields.image.fields.file.url;
+      const product = { id, ...item.fields, image };
       return product;
     });
 
