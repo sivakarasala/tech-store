@@ -1,9 +1,13 @@
 import React from "react";
+import Hero from "../components/Hero";
+import contactImg from "../images/contactBcg.jpeg";
+import Contact from "../components/ContactPage/Contact";
 
 export default function ContactPage() {
   return (
     <React.Fragment>
-      <h1>Aum namah shivaya from contact page</h1>
+      <Hero img={contactImg} />
+      <Contact />
     </React.Fragment>
   );
 }
