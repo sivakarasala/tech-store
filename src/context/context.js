@@ -236,7 +236,17 @@ class ProductProvider extends Component {
 
   // handle filtering
   handleChange = event => {
-    console.log("aum namah shivaya", event);
+    const name = event.target.name;
+    const value =
+      event.target.type === "checkbox"
+        ? event.target.checked
+        : event.target.value;
+    this.setState(
+      {
+        [name]: value
+      },
+      this.sortData
+    );
   };
 
   sortData = () => {};
