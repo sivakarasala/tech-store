@@ -56,7 +56,7 @@ export default function ProductFilter() {
                     {companies.map((company, index) => {
                       return (
                         <option key={index} value={company}>
-                          {company}
+                          {company.toUpperCase()}
                         </option>
                       );
                     })}
