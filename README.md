@@ -1,8 +1,6 @@
-# Tech Store
+## Tech Store
 
-### Built with React, Bootstrap, StyledComponents, ReactIcons
-
-### Product Details from Contentful
+### Built with React, Bootstrap, StyledComponents, ReactIcons, Contentful
 
 ## Deployed using Netlify
 
